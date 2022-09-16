@@ -1,6 +1,12 @@
-/*
-
-Please put your code under this comment block. You can try your logic
-Then you can add this file to staged area for commit and push to your own Branch ({your-name-with-dash})
-
-*/
+function capitalize(str) {
+  let arr = str.split(" ");
+  let sentence;
+  for (let x = 0; x < arr.length; x++) {
+    sentence = arr[x];
+    arr[x] = sentence[0].toUpperCase() + sentence.slice(1);
+  }
+  console.log(arr.join(" "));
+}
+capitalize("a short sentence");
+capitalize("a lazy fox");
+capitalize("look, it is working!");
