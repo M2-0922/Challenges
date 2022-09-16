@@ -1,19 +1,14 @@
-// capitalize(‘a short sentence’) → ‘A Short Sentence’
-let sentence = "a short sentence";
-//capitalize(‘a lazy fox’) → ‘A Lazy Fox’
-let sentence = "a lazy fox";
-// capitalize(‘look, it is working!’) → ‘Look, It Is Working!’
-let sentence = "look, it is working!";
+function capitalize(str) {
+  let arr = str.split(" ");
+  let sentence;
 
-^^^^^^ same from here ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-let temp;
-for (let x = 0; x < sentence.length; x++) {
-  if (x === 0) {
-    temp = sentence[0].toUpperCase();
-  } else if (sentence[x - 1] === " ") {
-    temp = temp + sentence[x].toUpperCase();
-  } else temp = temp + sentence[x];
+  for (let x = 0; x < arr.length; x++) {
+    sentence = arr[x];
+    arr[x] = sentence[0].toUpperCase() + sentence.slice(1);
+  }
+  console.log(arr.join(" "));
 }
-console.log(temp);
 
-
+capitalize("a short sentence");
+capitalize("a lazy fox");
+capitalize("look, it is working!");
