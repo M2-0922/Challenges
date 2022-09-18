@@ -52,12 +52,18 @@ function capitalize(str) {
   return cased.join(" ");
 }
 function capitalize(str) {
-  return str
-    .split(" ")
-    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
-    .join(" ");
+  const myArray = str.split(" ");
+  let result = "";
+  for (let word of myArray) {
+    const firstLetter = word[0].toUpperCase();
+    const others = word.substring(1);
+    result += firstLetter + others + " ";
+  }
+  return result;
 }
-
-
-
-
+const exp1 = capitalize("a short sentence");
+console.log(exp1);
+const exp2 = capitalize("a lazy fox");
+console.log(exp2);
+const exp3 = capitalize("look, it is working!");
+console.log(exp3);
