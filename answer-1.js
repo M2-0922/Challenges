@@ -16,7 +16,7 @@ const capitalize = (str) => {
     const splitedStr = str.split(' ');
 
     // Map splitedStr and replace first letter for each strings.
-    return splitedStr.map((ss) => ss[0].toUpperCase() + ss.substring(1));
+    return splitedStr.map((ss) => ss[0].toUpperCase() + ss.substring(1)).join(" ");
 }
 
 strings.forEach(string => console.log(capitalize(string)))
