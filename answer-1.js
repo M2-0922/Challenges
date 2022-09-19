@@ -30,10 +30,12 @@ function capitalize(str) {
 // ["look,", "it", "is", "working!"]
 // console.log(capitalize("look, it is working!"));
 
-// Second way (short ans)==================================================
+// Second way (short ans, using replace)==================================================
 
 const capitalize = (t) => t.replace(/(^|\s)[a-z]/g, (a) => a.toUpperCase());
 // console.log(capitalize("look, it is working!"));
+
+// Third way (using map)==================================================
 
 function capitalize(str) {
   // Split string into an array of words
