@@ -28,4 +28,24 @@ function capitalize(str) {
 
 // look, it is working!
 // ["look,", "it", "is", "working!"]
-console.log(capitalize("look, it is working!"));
+// console.log(capitalize("look, it is working!"));
+
+// Second way (short ans)==================================================
+
+const capitalize = (t) => t.replace(/(^|\s)[a-z]/g, (a) => a.toUpperCase());
+// console.log(capitalize("look, it is working!"));
+
+function capitalize(str) {
+  // Split string into an array of words
+  const string = str.split(" ");
+  const cased = [];
+
+  // Convert every first letter to uppercase
+  // Map, `map` is built-in method in javascript for iterate your array...
+  string.map((word) => {
+    cased.push(word[0].toUpperCase() + word.slice(1).toLowerCase());
+  });
+
+  // Convert my words array to a string with .join()
+  return cased.join(" ");
+}
