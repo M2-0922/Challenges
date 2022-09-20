@@ -4,9 +4,9 @@ const staticNum = arr.length;
 
 for (let i = 0; i < arr.length; i++) {
     let temp = '';
-    for (let s = 0; s < 9; s++) {
+    for (let s = 1; s < 9; s++) {
         if (i === arr.length - 1) {
-            temp += ' ' + '*'.repeat(9);
+            temp += '*'.repeat(staticNum + i);
             break;
         }
 
@@ -20,7 +20,6 @@ for (let i = 0; i < arr.length; i++) {
 
     console.log(temp);
 }
-
 
 //     *
 //    * *
