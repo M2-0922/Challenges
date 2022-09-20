@@ -3,8 +3,8 @@ function capitalize(str) {
   let sentence;
 
   for (let x = 0; x < arr.length; x++) {
-    sentence = arr[x];
-    arr[x] = sentence[0].toUpperCase() + sentence.slice(1);
+    // sentence = arr[x];
+    arr[x] = arr[x].charAt(0).toUpperCase() + arr[x].slice(1);
   }
   console.log(arr.join(" "));
 }
