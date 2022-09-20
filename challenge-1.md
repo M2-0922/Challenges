@@ -12,3 +12,13 @@
  capitalize(‘look, it is working!’) → ‘Look, It Is Working!’
 
 ```
+
+function capFirstLetter(string) {
+    let array = string.split(" ");
+    let capArray = [];
+    for (let element of array) {
+        let word = element.charAt(0).toUpperCase() + element.substring(1);
+        capArray.push(word);
+    }
+    return capArray.join(" ");
+}
