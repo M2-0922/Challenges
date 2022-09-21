@@ -1,25 +1,37 @@
-const arr = [...Array(5).keys()];
+function getHollowPyramidStar(size) {
+    const arr = [...Array(size).keys()];
 
-const staticNum = arr.length;
+    // limit of x-axis.
+    const cols = arr.length * 2 - 1;
 
-for (let i = 0; i < arr.length; i++) {
-    let temp = '';
-    for (let s = 1; s < 9; s++) {
-        if (i === arr.length - 1) {
-            temp += '*'.repeat(staticNum + i);
-            break;
-        }
+    // Middle of array x-axis.
+    const staticNum = arr.length;
 
-        if (s === staticNum - i || s === staticNum + i) {
-            temp += '*';
+    let pyramid = '';
+
+    for (let i = 0; i < arr.length; i++) {
+        let temp = '';
+
+        for (let s = 1; s < cols; s++) {
+            if (i === arr.length - 1) {
+                temp += '*'.repeat(staticNum + i);
+                break;
+            }
+
+            if (s === staticNum - i || s === staticNum + i) {
+                temp += '*';
+            }
+            else {
+                temp += ' ';
+            }
         }
-        else {
-            temp += ' ';
-        }
+        pyramid += temp + '\n';
     }
 
-    console.log(temp);
+    return pyramid
 }
+
+console.log(getHollowPyramidStar(5));
 
 //     *
 //    * *
