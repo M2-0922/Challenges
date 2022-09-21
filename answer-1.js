@@ -6,9 +6,9 @@ Then you can add this file to staged area for commit and push to your own Branch
 */
 
 
-//=======//
-// way 1 //
-//=======//
+/*=======*/
+/* way 1 */
+/*=======*/
 
 // let sentence = "a short sentence";
 // let temp;
@@ -23,9 +23,9 @@ Then you can add this file to staged area for commit and push to your own Branch
 // }
 // console.log(temp);
 
-//=======//
-// way 2 //
-//=======//
+/*=======*/
+/* way 2 */
+/*=======*/
 
 function capitalize(str) {
     let arr = str.split(" ");
@@ -33,7 +33,11 @@ function capitalize(str) {
     for (let x = 0; x < arr.length; x++) {
       sentence = arr[x];
       arr[x] = sentence[0].toUpperCase() + sentence.slice(1);
+      //sentence[0] は sentence[i].charAt(0) とも書けるよ！
     }
     console.log(arr.join(" "));
   }
-  capitalize("a short sentence");
+  
+ capitalize("a short sentence");
+ capitalize("a lazy fox");
+ capitalize("look, it is working!");
