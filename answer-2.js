@@ -27,18 +27,18 @@ console.log(string);
 /* way 2 */
 /*=======*/
 
-// let width = 9;
-// let n = (width + 1) / 2  //height
+let width = 9;
+let n = (width + 1) / 2  //height
 
-// for(let i = 1; i <= n; i++){
-//     let outBlank = " ".repeat(n - i);
+for(let i = 1; i <= n; i++){
+    let outBlank = " ".repeat(n - i);
 
-//     if(i === 1){
-//         console.log(`${outBlank}*${outBlank}`);
-//     }else if(1 < i < n){
-//         let innerBlank = " ".repeat(2 * i - 3);
-//         console.log(`${outBlank}*${innerBlank}*${outBlank}`);
-//     }else if(i === n){
-//         console.log("*".repeat(width));
-//     }
-// }
+    if(i === 1){
+        console.log(`${outBlank}*${outBlank}`);
+    }else if(1 < i && i < n){
+        let innerBlank = " ".repeat(2 * i - 3);
+        console.log(`${outBlank}*${innerBlank}*${outBlank}`);
+    }else if(i === n){
+        console.log("*".repeat(width));
+    }
+}
