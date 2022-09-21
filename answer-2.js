@@ -1,26 +1,30 @@
-let n = 5;
-let string = "";
-
-// External loop
-for (let i = 1; i <= n; i++) {
-  // printing spaces
-  for (let j = 1; j <= n - i; j++) {
-    string += " ";
-  }
-  // printing star
-  for (let k = 0; k < 2 * i - 1; k++) {
-    if(i === 1 || i === n) {
-      string += "*";
+let height = 5;
+let lastLine = 9;
+let spaceNum = 4;
+let row = "";
+let midSpace = 1;
+for (let i = 0; i < height; i++) {
+  if (i === 0) {
+    for (let s = 0; s < spaceNum; s++) {
+      row = row + " ";
     }
-    else {
-      if(k === 0 || k === 2 * i - 2) {
-        string += "*";
-      }
-      else {
-        string += " ";
-      }
+    row = row + "*";
+  } else if (i === 4) {
+    for (let st = 0; st < lastLine; st++) {
+      row = row + "*";
     }
+  } else {
+    for (let s = 0; s < spaceNum; s++) {
+      row = row + " ";
+    }
+    row = row + "*";
+    for (let ms = 0; ms < midSpace; ms++) {
+      row = row + " ";
+    }
+    row = row + "*";
+    midSpace = midSpace + 2;
   }
-  string += "\n";
+  spaceNum--;
+  console.log(row);
+  row = "";
 }
-console.log(string);
