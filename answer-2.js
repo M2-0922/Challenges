@@ -32,7 +32,6 @@ let n = (width + 1) / 2  //height
 
 for(let i = 1; i <= n; i++){
     let outBlank = " ".repeat(n - i);
-
     if(i === 1){
         console.log(`${outBlank}*${outBlank}`);
     }else if(1 < i && i < n){
