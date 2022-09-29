@@ -51,3 +51,13 @@ function capitalize(str) {
   // Convert my words array to a string with .join()
   return cased.join(" ");
 }
+function capitalize(str) {
+  return str
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}
+
+
+
+
