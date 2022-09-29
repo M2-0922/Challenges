@@ -7,5 +7,5 @@ function primeNumbers(number) {
     return console.log(number + ' is prime Number.');
 };
 
-primeNumbers(27)
-primeNumbers(31)
+primeNumbers(27); //not prime Number
+primeNumbers(31); //prime Number
