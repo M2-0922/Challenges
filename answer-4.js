@@ -1,6 +1,9 @@
 /* If the number can be devided by another number/other numbers(< the number) without any reminder, the number is not a prime number. If not, then the number must be a prime number. */
 
 function isPrime(number) {
+  if (number == 1) {
+    return false;
+  }
   for (let i = 2; i < number; i++) {
     if (number % i === 0) {
       return false;
@@ -10,6 +13,7 @@ function isPrime(number) {
   return true;
 }
 
+console.log(isPrime(1)); // false
 console.log(isPrime(2)); // true
 console.log(isPrime(5)); // true
 console.log(isPrime(6)); // false
