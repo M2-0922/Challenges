@@ -1,3 +1,5 @@
+/* If the number can be devided by another number/other numbers(< the number) without any reminder, the number is not a prime number. If not, then the number must be a prime number. */
+
 function isPrime(number) {
   for (i = 2; i < number; i++) {
     if (number % i === 0) {
